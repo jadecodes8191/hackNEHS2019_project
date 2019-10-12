@@ -1,0 +1,55 @@
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/* TopNav */
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    
+}
+
+.topnav li {
+    float: left;
+}
+
+.topnav a {
+  display: block;
+  color: #FFF;
+  text-align: center;
+  padding: 20px 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.topnav a:hover {
+    color: #000;
+    background-color: #FFF;
+}
+
+.topnav a:active {
+    color: #111;
+    background-color: #FFF;
+}
+
+
+/* Important titles */
+.important {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    font-size: 80px;
+}
