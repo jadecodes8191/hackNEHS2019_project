@@ -74,3 +74,8 @@ ul {
 .grid-item {
     
 }
+
+/* Forms */
+form {
+    margin: 20px;
+}
