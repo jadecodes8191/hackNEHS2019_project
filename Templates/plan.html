@@ -2,87 +2,314 @@
 
 <html>
 
-    <head>
-    
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="/static/style.css">
-    
-        
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-        
-    </head>
+<head>
 
-    
-    <body>
-    
-        <nav class="topnav">
-            <ul>
-                <li> <a href="/">A TEST</a></li>
-                
-                <li> <a href="/historicalData">Historical Data</a></li>
-                
-                <li> <a href="/liveData">Live Data</a> </li>
-                
-                <li> <a href="/plan">Plan Trip</a> </li>
-                
-                <li style="float:right"><a href="/about">About</a></li>
-            </ul>
-        
-        </nav>      
-    
-        
-        <header class="important">
-            Plan your Trip
-        </header>
-        
-        <form>
-          Starting Station:<br>
-          <select name="sStation">
-              <option value="none">Select a Station</option>
-              <option value="saab">Find a</option>
-              <option value="fiat">list of </option>
-              <option value="audi">le stations.</option>
-            </select> <br>
-          Destination Station: <br>
-            <select name="dStation">
-                <option value="none">Select a Station</option>
-                <option value="Alewife">Alewife</option>
-                <option value="Andrew">Andrew</option>
-                <option value="Ashmont">Ashmont</option>
-                <option value="Braintree">Braintree</option>
-                <option value="Broadway">Broadway</option>
-                <option value="Central">Central</option>
-                <option value="CharlesMGH">Charles/MGH</option>
-                <option value="Davis">Davis</option>
-                <option value="DowntownCrossing">Downtown Crossing</option>
-                <option value="FieldsCorner">Fields Corner</option>
-                <option value="Harvard">Harvard</option>
-                <option value="JFKUMass">JFK/UMass</option>
-                <option value="KendallMIT">Kendall/MIT</option>
-                <option value="NorthQuincy">North Quincy</option>
-                <option value="ParkStreet">Park Street</option>
-                <option value="Porter">Porter</option>
-                <option value="QuincyAdams">Quincy Adams</option>
-                <option value="QuincyCenter">Quincy Center</option>
-                <option value="SavinHill">Savin Hill</option>
-                <option value="Shawmut">Shawmut</option>
-                <option value="SouthStation">South Station</option>
-                <option value="Wollaston">Wollaston</option>
-            </select> <br>
-          Select a date: <br>
-            <input type="date" name="dep_day"> <br>
-          Select a time: <br>
-            <input type="time" name="dep_time">
-        </form>
-        
-        <!--section>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <nav class="topnav">
+        <ul>
+            <li> <a href="/">A TEST</a></li>
+
+            <li> <a href="/historicalData">Historical Data</a></li>
+
+            <li> <a href="/liveData">Live Data</a> </li>
+
+            <li> <a href="/plan">Plan Trip</a> </li>
+
+            <li style="float:right"><a href="/about">About</a></li>
+        </ul>
+
+    </nav>
+
+
+    <header class="important">
+        Plan your Trip
+    </header>
+
+    <form>
+        Starting Station:<br>
+        <select name="sStation">
+            <option value="Andrew">Andrew</option>
+            <option value="Ashmont">Ashmont</option>
+            <option value="Braintree">Braintree</option>
+            <option value="Broadway">Broadway</option>
+            <option value="Central">Central</option>
+            <option value="Charles/MGH">Charles/MGH</option>
+            <option value="Davis">Davis</option>
+            <option value="Downtown Crossing">Downtown Crossing</option>
+            <option value="Fields Corner">Fields Corner</option>
+            <option value="Harvard">Harvard</option>
+            <option value="JFK/UMass">JFK/UMass</option>
+            <option value="Kendall/MIT">Kendall/MIT</option>
+            <option value="North Quincy">North Quincy</option>
+            <option value="Park Street">Park Street</option>
+            <option value="Porter">Porter</option>
+            <option value="Quincy Adams">Quincy Adams</option>
+            <option value="Quincy Center">Quincy Center</option>
+            <option value="Savin Hill">Savin Hill</option>
+            <option value="Shawmut">Shawmut</option>
+            <option value="South Station">South Station</option>
+            <option value="Wollaston">Wollaston</option>
+            <option value="Ashmont">Ashmont</option>
+            <option value="Butler">Butler</option>
+            <option value="Capen Street">Capen Street</option>
+            <option value="Cedar Grove">Cedar Grove</option>
+            <option value="Central Avenue">Central Avenue</option>
+            <option value="Mattapan">Mattapan</option>
+            <option value="Milton">Milton</option>
+            <option value="Valley Road">Valley Road</option>
+            <option value="Assembly">Assembly</option>
+            <option value="Back Bay">Back Bay</option>
+            <option value="Chinatown">Chinatown</option>
+            <option value="Community College">Community College</option>
+            <option value="Downtown Crossing">Downtown Crossing</option>
+            <option value="Forest Hills">Forest Hills</option>
+            <option value="Green Street">Green Street</option>
+            <option value="Haymarket">Haymarket</option>
+            <option value="Jackson Square">Jackson Square</option>
+            <option value="Malden Center">Malden Center</option>
+            <option value="Massachusetts Avenue">Massachusetts Avenue</option>
+            <option value="North Station">North Station</option>
+            <option value="Oak Grove">Oak Grove</option>
+            <option value="Roxbury Crossing">Roxbury Crossing</option>
+            <option value="Ruggles">Ruggles</option>
+            <option value="State">State</option>
+            <option value="Stony Brook">Stony Brook</option>
+            <option value="Sullivan Square">Sullivan Square</option>
+            <option value="Tufts Medical Center">Tufts Medical Center</option>
+            <option value="Wellington">Wellington</option>
+            <option value="Allston Street">Allston Street</option>
+            <option value="Arlington">Arlington</option>
+            <option value="Babcock Street">Babcock Street</option>
+            <option value="Back of the Hill">Back of the Hill</option>
+            <option value="Beaconsfield">Beaconsfield</option>
+            <option value="Blandford Street">Blandford Street</option>
+            <option value="Boston College">Boston College</option>
+            <option value="Boston University Central">Boston University Central</option>
+            <option value="Boston University East">Boston University East</option>
+            <option value="Boston University West">Boston University West</option>
+            <option value="Boylston">Boylston</option>
+            <option value="Brandon Hall">Brandon Hall</option>
+            <option value="Brigham Circle">Brigham Circle</option>
+            <option value="Brookline Hills">Brookline Hills</option>
+            <option value="Brookline Village">Brookline Village</option>
+            <option value="Chestnut Hill">Chestnut Hill</option>
+            <option value="Chestnut Hill Avenue">Chestnut Hill Avenue</option>
+            <option value="Chiswick Road">Chiswick Road</option>
+            <option value="Cleveland Circle">Cleveland Circle</option>
+            <option value="Coolidge Corner">Coolidge Corner</option>
+            <option value="Copley">Copley</option>
+            <option value="Dean Road">Dean Road</option>
+            <option value="Eliot">Eliot</option>
+            <option value="Englewood Avenue">Englewood Avenue</option>
+            <option value="Fairbanks Street">Fairbanks Street</option>
+            <option value="Fenway">Fenway</option>
+            <option value="Fenwood Road">Fenwood Road</option>
+            <option value="Government Center">Government Center</option>
+            <option value="Griggs Street">Griggs Street</option>
+            <option value="Harvard Avenue">Harvard Avenue</option>
+            <option value="Hawes Street">Hawes Street</option>
+            <option value="Haymarket">Haymarket</option>
+            <option value="Heath Street">Heath Street</option>
+            <option value="Hynes Convention Center">Hynes Convention Center</option>
+            <option value="Kenmore">Kenmore</option>
+            <option value="Kent Street">Kent Street</option>
+            <option value="Lechmere">Lechmere</option>
+            <option value="Longwood">Longwood</option>
+            <option value="Longwood Medical Area">Longwood Medical Area</option>
+            <option value="Mission Park">Mission Park</option>
+            <option value="Museum of Fine Arts">Museum of Fine Arts</option>
+            <option value="Newton Centre">Newton Centre</option>
+            <option value="Newton Highlands">Newton Highlands</option>
+            <option value="North Station">North Station</option>
+            <option value="Northeastern University">Northeastern University</option>
+            <option value="Packards Corner">Packards Corner</option>
+            <option value="Park Street">Park Street</option>
+            <option value="Pleasant Street">Pleasant Street</option>
+            <option value="Prudential">Prudential</option>
+            <option value="Reservoir">Reservoir</option>
+            <option value="Riverside">Riverside</option>
+            <option value="Riverway">Riverway</option>
+            <option value="Saint Marys Street">Saint Marys Street</option>
+            <option value="Saint Paul Street">Saint Paul Street</option>
+            <option value="Saint Paul Street">Saint Paul Street</option>
+            <option value="Science Park/West End">Science Park/West End</option>
+            <option value="South Street">South Street</option>
+            <option value="Summit Avenue">Summit Avenue</option>
+            <option value="Sutherland Road">Sutherland Road</option>
+            <option value="Symphony">Symphony</option>
+            <option value="Tappan Street">Tappan Street</option>
+            <option value="Waban">Waban</option>
+            <option value="Warren Street">Warren Street</option>
+            <option value="Washington Square">Washington Square</option>
+            <option value="Washington Street">Washington Street</option>
+            <option value="Woodland">Woodland</option>
+            <option value="Airport">Airport</option>
+            <option value="Aquarium">Aquarium</option>
+            <option value="Beachmont">Beachmont</option>
+            <option value="Bowdoin">Bowdoin</option>
+            <option value="Government Center">Government Center</option>
+            <option value="Maverick">Maverick</option>
+            <option value="Orient Heights">Orient Heights</option>
+            <option value="Revere Beach">Revere Beach</option>
+            <option value="State">State</option>
+            <option value="Suffolk Downs">Suffolk Downs</option>
+            <option value="Wonderland">Wonderland</option>
+            <option value="Wood Island">Wood Island</option>
+        </select> <br>
+        Destination Station: <br>
+        <select name="dStation">
+            <option value="Andrew">Andrew</option>
+            <option value="Ashmont">Ashmont</option>
+            <option value="Braintree">Braintree</option>
+            <option value="Broadway">Broadway</option>
+            <option value="Central">Central</option>
+            <option value="Charles/MGH">Charles/MGH</option>
+            <option value="Davis">Davis</option>
+            <option value="Downtown Crossing">Downtown Crossing</option>
+            <option value="Fields Corner">Fields Corner</option>
+            <option value="Harvard">Harvard</option>
+            <option value="JFK/UMass">JFK/UMass</option>
+            <option value="Kendall/MIT">Kendall/MIT</option>
+            <option value="North Quincy">North Quincy</option>
+            <option value="Park Street">Park Street</option>
+            <option value="Porter">Porter</option>
+            <option value="Quincy Adams">Quincy Adams</option>
+            <option value="Quincy Center">Quincy Center</option>
+            <option value="Savin Hill">Savin Hill</option>
+            <option value="Shawmut">Shawmut</option>
+            <option value="South Station">South Station</option>
+            <option value="Wollaston">Wollaston</option>
+            <option value="Ashmont">Ashmont</option>
+            <option value="Butler">Butler</option>
+            <option value="Capen Street">Capen Street</option>
+            <option value="Cedar Grove">Cedar Grove</option>
+            <option value="Central Avenue">Central Avenue</option>
+            <option value="Mattapan">Mattapan</option>
+            <option value="Milton">Milton</option>
+            <option value="Valley Road">Valley Road</option>
+            <option value="Assembly">Assembly</option>
+            <option value="Back Bay">Back Bay</option>
+            <option value="Chinatown">Chinatown</option>
+            <option value="Community College">Community College</option>
+            <option value="Downtown Crossing">Downtown Crossing</option>
+            <option value="Forest Hills">Forest Hills</option>
+            <option value="Green Street">Green Street</option>
+            <option value="Haymarket">Haymarket</option>
+            <option value="Jackson Square">Jackson Square</option>
+            <option value="Malden Center">Malden Center</option>
+            <option value="Massachusetts Avenue">Massachusetts Avenue</option>
+            <option value="North Station">North Station</option>
+            <option value="Oak Grove">Oak Grove</option>
+            <option value="Roxbury Crossing">Roxbury Crossing</option>
+            <option value="Ruggles">Ruggles</option>
+            <option value="State">State</option>
+            <option value="Stony Brook">Stony Brook</option>
+            <option value="Sullivan Square">Sullivan Square</option>
+            <option value="Tufts Medical Center">Tufts Medical Center</option>
+            <option value="Wellington">Wellington</option>
+            <option value="Allston Street">Allston Street</option>
+            <option value="Arlington">Arlington</option>
+            <option value="Babcock Street">Babcock Street</option>
+            <option value="Back of the Hill">Back of the Hill</option>
+            <option value="Beaconsfield">Beaconsfield</option>
+            <option value="Blandford Street">Blandford Street</option>
+            <option value="Boston College">Boston College</option>
+            <option value="Boston University Central">Boston University Central</option>
+            <option value="Boston University East">Boston University East</option>
+            <option value="Boston University West">Boston University West</option>
+            <option value="Boylston">Boylston</option>
+            <option value="Brandon Hall">Brandon Hall</option>
+            <option value="Brigham Circle">Brigham Circle</option>
+            <option value="Brookline Hills">Brookline Hills</option>
+            <option value="Brookline Village">Brookline Village</option>
+            <option value="Chestnut Hill">Chestnut Hill</option>
+            <option value="Chestnut Hill Avenue">Chestnut Hill Avenue</option>
+            <option value="Chiswick Road">Chiswick Road</option>
+            <option value="Cleveland Circle">Cleveland Circle</option>
+            <option value="Coolidge Corner">Coolidge Corner</option>
+            <option value="Copley">Copley</option>
+            <option value="Dean Road">Dean Road</option>
+            <option value="Eliot">Eliot</option>
+            <option value="Englewood Avenue">Englewood Avenue</option>
+            <option value="Fairbanks Street">Fairbanks Street</option>
+            <option value="Fenway">Fenway</option>
+            <option value="Fenwood Road">Fenwood Road</option>
+            <option value="Government Center">Government Center</option>
+            <option value="Griggs Street">Griggs Street</option>
+            <option value="Harvard Avenue">Harvard Avenue</option>
+            <option value="Hawes Street">Hawes Street</option>
+            <option value="Haymarket">Haymarket</option>
+            <option value="Heath Street">Heath Street</option>
+            <option value="Hynes Convention Center">Hynes Convention Center</option>
+            <option value="Kenmore">Kenmore</option>
+            <option value="Kent Street">Kent Street</option>
+            <option value="Lechmere">Lechmere</option>
+            <option value="Longwood">Longwood</option>
+            <option value="Longwood Medical Area">Longwood Medical Area</option>
+            <option value="Mission Park">Mission Park</option>
+            <option value="Museum of Fine Arts">Museum of Fine Arts</option>
+            <option value="Newton Centre">Newton Centre</option>
+            <option value="Newton Highlands">Newton Highlands</option>
+            <option value="North Station">North Station</option>
+            <option value="Northeastern University">Northeastern University</option>
+            <option value="Packards Corner">Packards Corner</option>
+            <option value="Park Street">Park Street</option>
+            <option value="Pleasant Street">Pleasant Street</option>
+            <option value="Prudential">Prudential</option>
+            <option value="Reservoir">Reservoir</option>
+            <option value="Riverside">Riverside</option>
+            <option value="Riverway">Riverway</option>
+            <option value="Saint Marys Street">Saint Marys Street</option>
+            <option value="Saint Paul Street">Saint Paul Street</option>
+            <option value="Saint Paul Street">Saint Paul Street</option>
+            <option value="Science Park/West End">Science Park/West End</option>
+            <option value="South Street">South Street</option>
+            <option value="Summit Avenue">Summit Avenue</option>
+            <option value="Sutherland Road">Sutherland Road</option>
+            <option value="Symphony">Symphony</option>
+            <option value="Tappan Street">Tappan Street</option>
+            <option value="Waban">Waban</option>
+            <option value="Warren Street">Warren Street</option>
+            <option value="Washington Square">Washington Square</option>
+            <option value="Washington Street">Washington Street</option>
+            <option value="Woodland">Woodland</option>
+            <option value="Airport">Airport</option>
+            <option value="Aquarium">Aquarium</option>
+            <option value="Beachmont">Beachmont</option>
+            <option value="Bowdoin">Bowdoin</option>
+            <option value="Government Center">Government Center</option>
+            <option value="Maverick">Maverick</option>
+            <option value="Orient Heights">Orient Heights</option>
+            <option value="Revere Beach">Revere Beach</option>
+            <option value="State">State</option>
+            <option value="Suffolk Downs">Suffolk Downs</option>
+            <option value="Wonderland">Wonderland</option>
+            <option value="Wood Island">Wood Island</option>
+        </select> <br>
+        Select a date: <br>
+        <input type="date" name="dep_day"> <br>
+        Select a time: <br>
+        <input type="time" name="dep_time">
+    </form>
+
+    <!--section>
             <header class="lessimportant">
                 Historical Data
             </header>
         </section -->
-        
-        
-    </body>
-    
+
+
+</body>
+
 </html>
