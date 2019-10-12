@@ -24,6 +24,8 @@ ul {
 
 .topnav li {
     float: left;
+    margin-left: 10px;
+    margin-right: 10px
 }
 
 .topnav a {
@@ -45,11 +47,30 @@ ul {
     background-color: #FFF;
 }
 
-
 /* Important titles */
 .important {
     margin-top: 50px;
     padding: 30px;
     text-align: center;
     font-size: 80px;
+}
+
+/* Lesser titles but important nontheless */
+.lessimportant {
+    margin: 10px;
+    padding: 30px;
+    font-size: 30px;
+    background-image:linear-gradient(to right, #6688FF, #FFFFFF);
+    border-radius: 10px;
+}
+
+/* Grids */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    
 }
