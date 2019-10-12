@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Plotly.js -->
+  <title>Mock Prediction Visualisation Testing</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+
+
+
+<body>
+  <!--Historical Data-->
+  <div id="div"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <script>
+    var bluePPP = {{ history|safe }};
+    var predictionPPP = {{ prediction|safe }};
+    var predictionLow = [];
+    var predictionHigh = [];
+    var blueDate = [];
+    var predictionDate = [];
+    var bluePercent = [];
+    var predictionPercent = [];
+    for (i = 0; i < bluePPP.length; i++) {
+      blueDate.push(bluePPP[i][1]);
+      bluePercent.push(bluePPP[i][0]);
+    }
+    for (i = 0; i < predictionPPP.length; i++) {
+      predictionDate.push(predictionPPP[i][0]);
+      predictionLow.push(predictionPPP[i][1]);
+      predictionHigh.push(predictionPPP[i][2]);
+      predictionPercent.push(predictionPPP[i][3]);
+    }
+    var line = {
+      x: blueDate,
+      y: bluePercent,
+      mode: 'lines',
+      type: 'scatter',
+      name: 'Past Reliability'
+    };
+    var line1 = {
+      x: predictionDate,
+      y: predictionPercent,
+      //fill: 'tonextx',
+      mode: 'lines',
+      type: 'scatter',
+      name: 'Predicted Reliability'
+    };
+    var line2 = {
+      x: predictionDate,
+      y: predictionLow,
+      fill: 'tonextx',
+      mode: 'lines',
+      type: 'scatter',
+      name: 'Prediction Low'
+    }
+    var line3 = {
+      x:predictionDate,
+      y: predictionHigh,
+      fill: 'tonextx',
+      mode:'lines',
+      type: 'scatter',
+      name: 'Prediction High'
+    }
+    var layout = {
+      yaxis: {
+        range : [0, 1]
+      },
+      colorway : ['#4b8ac4', '#d1e9ff', '#d1e9ff', '#fc8d05'],
+      title: 'Predicted Reliability of {{ title }}'
+
+    };
+    var data = [line1, line2, line3, line];
+    Plotly.newPlot('div', data, layout);
+
+  </script>
+</body>
+</htmk>
