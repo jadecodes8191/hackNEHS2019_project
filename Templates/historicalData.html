@@ -43,22 +43,11 @@
                 Four years worth of data
             </header>
             
-            <div class="grid-container">
-              <div class="grid-item">1</div>
-              <div class="grid-item">2</div>
-              <div class="grid-item">3</div>
-              <div class="grid-item">4</div>
-              <div class="grid-item">5</div>
-              <div class="grid-item">6</div>
-              <div class="grid-item">7</div>
-              <div class="grid-item">8</div>
-              <div class="grid-item">9</div>
-              <ul>
+              <ul style="margin-top: 320px">
                     {% for set in datasets %}
-                        <li><a href="/historicalData/{{ set }}">{{ set }}</a></li>
+                            <li><a href="/historicalData/{{ set }}">{{ set }}</a></li>
                     {% endfor %}
                 </ul>
-            </div>
             
             
         </section>
